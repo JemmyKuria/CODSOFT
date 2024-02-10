@@ -1,0 +1,11 @@
+
+body.About{
+    background-color: azure;
+}
+body.Services{
+    background-color:beige;
+}
+body.Top{
+    background-color: azure;
+    background-image: 'child.jpg';
+}
