@@ -1,11 +1,30 @@
+.About {
+    background-color: azure;
+}
 
-body.About{
-    background-color: azure;
+.About img {
+    float: right;
+    border-radius: 20%;
+    height: 200px;
+    width: 200px;
 }
-body.Services{
-    background-color:beige;
+
+.About p {
+    text-align: left;
+    float: left;
 }
-body.Top{
+
+.Services {
+    background-color: beige;
+}
+
+.Top {
     background-color: azure;
-    background-image: 'child.jpg';
+    background-image: url('child.jpg');
+}
+
+.About button {
+    background-color: palevioletred;
+    border-radius: 50px;
+    color: black;
 }
