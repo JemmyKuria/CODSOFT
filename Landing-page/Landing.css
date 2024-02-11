@@ -1,30 +1,177 @@
+/* General styles */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+
+.header {
+    background-color: #f30c9b;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+}
+
+.links icon {
+    margin-right: 10px;
+}
+
+.links icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.pages a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Main content styles */
+
+.Top {
+    position: relative;
+    height: 500px;
+    background-image: url('child.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Top .content {
+    z-index: 1;
+}
+
+.Top h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.Top p {
+    font-size: 18px;
+}
+
 .About {
-    background-color: azure;
+    background-color: #f2f2f2;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse; /* Reverse direction of flex items */
 }
 
 .About img {
-    float: right;
     border-radius: 20%;
-    height: 200px;
-    width: 200px;
-}
-
-.About p {
-    text-align: left;
-    float: left;
-}
-
-.Services {
-    background-color: beige;
-}
-
-.Top {
-    background-color: azure;
-    background-image: url('child.jpg');
+    height: 400px;
+    width: 400px;
+    margin-left: 50px; /* Adjust margin to the opposite side */
 }
 
 .About button {
-    background-color: palevioletred;
-    border-radius: 50px;
-    color: black;
+    background-color: #f30c9b; /* Pink button color */
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.About button:hover {
+    background-color: #d30b89; /* Darker pink on hover */
+}
+
+.About .content {
+    flex: 1;
+}
+
+.Services {
+    background-color: #f2f2f2b9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.Services h1 {
+    color: #333;
+}
+
+.Services grid {
+    display: flex;
+    justify-content: center;
+}
+
+.Services .service {
+    margin: 20px;
+}
+
+.Services img {
+    border-radius: 50%;
+    border: 2px solid #666;
+    transition: transform 0.3s;
+    width: 400px;
+    height: 400px;
+}
+
+.Services img:hover {
+    transform: scale(1.1);
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack header items vertically on small screens */
+        text-align: center;
+    }
+
+    .links {
+        margin-bottom: 10px; /* Add some spacing between header sections */
+    }
+
+    .pages {
+        margin-top: 10px; /* Add some spacing between header sections */
+    }
+
+    .Top {
+        height: 300px; /* Adjust height of top section for smaller screens */
+    }
+
+    .Top h1 {
+        font-size: 24px; /* Decrease font size of heading for smaller screens */
+    }
+
+    .Top p {
+        font-size: 14px; /* Decrease font size of paragraph for smaller screens */
+    }
+
+    .About {
+        padding: 30px; /* Decrease padding for smaller screens */
+    }
+
+    .About img {
+        height: 300px; /* Adjust image size for smaller screens */
+        width: 300px;
+        margin-left: 0; /* Remove margin for smaller screens */
+        margin-right: 0;
+    }
+
+    .About .content {
+        margin-top: 20px; /* Add some space between image and text for smaller screens */
+    }
+
+    .Services {
+        padding: 30px 0; /* Decrease padding for smaller screens */
+    }
 }
