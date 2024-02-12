@@ -5,9 +5,10 @@
 }
 #header{
     height: 100vh;
-    background-image: url(images/background.png);
-    background-position: center;
-    background-size: cover;
+    background-image: url(images/me2.jpeg);
+    background-position: right;
+    background-size: 50% 150%;
+    background-repeat: no-repeat;
 }
 .container{
     margin-right: 100px;
