@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL,
+  baseURL: 'http://localhost:3000',
 });
 
 export default {
@@ -11,5 +11,9 @@ export default {
   createJob: (job) => api.post('/jobs', job),
   updateJob: (id, job) => api.put(`/jobs/${id}`, job),
   deleteJob: (id) => api.delete(`/jobs/${id}`),
-  applyJob: (jobId, applicationData) => api.post(`/jobs/${jobId}/apply`, applicationData),
+  applyJob: (jobId, applicationData) => api.post(`/jobs/${jobId}/apply`, applicationData, {
+    headers: {
+      'Content-Type': 'multipart/form-data',
+    },
+  }),
 };
