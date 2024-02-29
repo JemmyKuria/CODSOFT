@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import api from './api';
-import JobDetail from './JobDetail';
+import { Link } from 'react-router-dom';
 
 function JobList() {
   const [jobs, setJobs] = useState([]);
@@ -17,8 +17,10 @@ function JobList() {
     <ul>
       {jobs.map((job) => (
         <li key={job.id}>
-          <h2><a href={`/jobs/${job.id}`}>{job.title}</a></h2>
-          <p>{job.description}</p>
+          <Link to={`/jobs/${job.id}`}>
+            <h2>{job.title}</h2>
+            <p>{job.description}</p>
+          </Link>
           <form onSubmit={(e) => {
             e.preventDefault();
             handleApply(job.id);
