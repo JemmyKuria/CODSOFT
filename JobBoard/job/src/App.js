@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import JobList from './listjobs';
-import JobDetail from './JobDetail';
+import JobList from './job-board-frontend/listjobs';
+import JobDetail from './job-board-frontend/JobDetail';
 
 function App() {
   return (
